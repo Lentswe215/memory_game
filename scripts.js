@@ -10,11 +10,24 @@ let colorsOfCards = [
 "purple",
 "green",
 "aqua",
-"orange",
+"orange"
 ]
 
+let cards = [...document.querySelectorAll('.card')];
 
+for (let color of colorsOfCards) {
+  let cardAIndex = parseInt(Math.random() * cards.length);
+  let cardA = cards[cardAIndex];
+  cards.splice(cardAIndex, 1);
+  cardA.className += ` ${color}`;
+  cardA.setAttribute('card-color', color);
 
+  let cardBIndex = parseInt(Math.random() * cards.length);
+  let cardB = cards[cardBIndex];
+  cards.splice(cardBIndex, 1);
+  cardB.className += ` ${color}`;
+  cardB.setAttribute('card-color', color);
+}
 function onCardClicked(e) {
   let target = e.currentTarget;
 
@@ -34,7 +47,7 @@ function onCardClicked(e) {
       target.getAttribute("card-color")
     ) {
       preventClick= true;
-  
+      console.log("colors not match")
         setTimeout(() => {
             clickedCard.className = clickedCard.className.replace('done','').trim() + ' card-hidden';
             target.className = target.className.replace('done','').trim() + ' card-hidden';
@@ -42,6 +55,8 @@ function onCardClicked(e) {
             preventClick = false;
         }, 1000);
     } else {
+      console.log("colors match")
+
         clickedCard = null;
         count++;
       }
