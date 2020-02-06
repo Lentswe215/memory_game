@@ -1,0 +1,66 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+h1 {
+    text-align: center;
+    color:rgb(198, 243, 198);
+    font-size: 400%;
+    text-decoration: underline;
+    font-family: "Montserrat Alternates";
+    color: rgba(255, 255, 255, 0.884);
+}
+
+.row-box {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width:100px;
+    height: 100px;
+    cursor: pointer;
+}
+.card:hover{
+    border: 1px solid black;
+    opacity: 0.5;
+}
+
+.card.done {
+    cursor: default;
+}
+
+.card.done:hover{
+    border: 0px;
+    opacity: 1;
+}
+
+.red {
+    background-color: red;
+}
+.aqua {
+    background-color: aqua;
+}
+.orange {
+    background-color: orange;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.pink{
+    background-color: pink;
+}
+.purple {
+    background-color: purple;
+}
+
+.card-hidden {
+    background-color: gray;
+}
