@@ -14,6 +14,7 @@ h1 {
 
 .row-box {
     text-align: center;
+    perspective: 1000px;
 }
 
 .card {
@@ -21,14 +22,24 @@ h1 {
     width:100px;
     height: 100px;
     cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform.5s;
 }
 .card:hover{
     border: 1px solid black;
     opacity: 0.5;
 }
 
+.card:active {
+    transform: scale(.97);
+    transition: transform.2s;
+}
+
 .card.done {
     cursor: default;
+    transform: rotateY(180deg)
+
 }
 
 .card.done:hover{
@@ -37,30 +48,30 @@ h1 {
 }
 
 .red {
-    background-color: red;
+    background-color: #ff5151;
 }
 .aqua {
-    background-color: aqua;
+    background: #00a8cc;
 }
 .orange {
-    background-color: orange;
+    background-color: #ffa41b;
 }
 .yellow {
-    background-color: yellow;
+    background-color: #ecce6d;
 }
 .green {
-    background-color: green;
+    background-color: #0a8543;
 }
 .blue {
-    background-color: blue;
+    background-color: #040858;
 }
 .pink{
-    background-color: pink;
+    background-color: #a4079e;
 }
 .purple {
-    background-color: purple;
+    background-color: #480262;
 }
 
-.card-hidden {
-    background-color: gray;
+.frontCard-hidden {
+    background-color: #6c7b95;
 }
