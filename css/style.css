@@ -14,7 +14,7 @@ h1 {
 
 .row-box {
     text-align: center;
-    perspective: 1000px;
+    perspective: 100px;
 }
 
 .card {
@@ -32,7 +32,7 @@ h1 {
 }
 
 .card:active {
-    transform: scale(.97);
+    transform: scale(0.90);
     transition: transform.2s;
 }
 

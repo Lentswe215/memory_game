@@ -28,11 +28,13 @@ for (let color of colorsOfCards) {
     cardB.className += ` ${color}`;
     cardB.setAttribute("card-color", color);
 }
-function onCardClicked(e) {
-    let currentCard = e.currentTarget;
-
-    if (preventClick || currentCard === clickedCard || target.className.includes("flipped"))
+function onCardClicked(event) {
+    let currentCard = event.currentTarget;
+console.log(currentCard)
+    if (preventClick || currentCard === clickedCard || target.className.includes("flipped")){
+        return;
     }
+    
     currentCard.className = currentCard.className.replace("frontCard-hidden", "").trim();
 
     currentCard.className += " flipped";
@@ -54,6 +56,6 @@ function onCardClicked(e) {
         }
     }
     if (count == 8) {
-        alert("Congrats You Won!!!");
+        alert("Congrats You Won!!");
     }
 }
